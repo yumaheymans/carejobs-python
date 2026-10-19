@@ -1,0 +1,46 @@
+[build-system]
+# 1.27 is the first hatchling that reads the SPDX `license` string and `license-files` (PEP 639).
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "carejobs"
+version = "1.0.0"
+description = "Client and CLI for the CareJobs.Now healthcare jobs API: search US healthcare jobs and the pay employers post"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "CareJobs.Now", email = "hello@carejobs.now" }]
+requires-python = ">=3.9"
+keywords = ["healthcare", "jobs", "nursing", "job-search", "salary", "mcp", "api", "careers"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://carejobs.now/data"
+Source = "https://github.com/yumaheymans/carejobs-python"
+Issues = "https://github.com/yumaheymans/carejobs-python/issues"
+Changelog = "https://github.com/yumaheymans/carejobs-python/blob/main/CHANGELOG.md"
+
+[project.scripts]
+carejobs = "carejobs.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/carejobs"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "CHANGELOG.md"]
