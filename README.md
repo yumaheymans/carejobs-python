@@ -177,7 +177,8 @@ The CareJobs.Now data files (`/roles.json` and `/pay.json`) are published under 
 - Data and API docs: <https://carejobs.now/data>
 - MCP server: <https://carejobs.now/api/mcp>
 - OpenAPI spec: <https://github.com/yumaheymans/carejobs-mcp>
-- npm package: `npm install carejobs`
+- Other clients: Go (`go get github.com/yumaheymans/carejobs-go`), Ruby (`gem install carejobs`), Swift and Elixir: <https://carejobs.now/apps>
+- LangChain, LlamaIndex and Haystack integrations: `langchain-carejobs`, `llama-index-tools-carejobs`, `carejobs-haystack`
 
 ## License
 
